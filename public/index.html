@@ -1,0 +1,54 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Node.js CRUD App</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Node.js CRUD App</h1>
+
+    <form id="recordForm">
+      <label for="title">Title:</label>
+      <!-- Adjusted the width of the title input -->
+      <input type="text" id="title" name="title" style="width: 98%;" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <button type="submit">Add Record</button>
+    </form>
+
+    <table id="recordsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th colspan="2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Records will be displayed here -->
+      </tbody>
+    </table>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Record</h2>
+        <label for="editTitle">Title:</label>
+        <input type="text" id="editTitle" name="editTitle" required>
+        <label for="editDescription">Description:</label>
+        <textarea id="editDescription" name="editDescription" required></textarea>
+        <button id="saveChangesBtn">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
