@@ -1,10 +1,8 @@
-//database.js
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('node_crud', 'postgres', 'rstha876', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
 });
 
 module.exports = sequelize;
-    
+// 'node_crud', 'postgres', 'rstha876'
